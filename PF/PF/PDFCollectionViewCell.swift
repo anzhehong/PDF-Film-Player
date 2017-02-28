@@ -17,7 +17,7 @@ class PDFCollectionViewCell: UICollectionViewCell {
         if let img = UIImage(named: "pdf") {
             self.backgroundImg.image = img
         } else {
-            self.backgroundImg.backgroundColor = UIColor.lightGrayColor()
+            self.backgroundImg.backgroundColor = UIColor.lightGray
         }
         self.layer.cornerRadius = 5
         

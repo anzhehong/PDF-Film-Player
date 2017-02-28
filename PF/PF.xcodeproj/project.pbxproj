@@ -235,6 +235,7 @@
 					62120DD91D5ED94F004B327D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 2XYAGB2947;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -420,7 +421,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PF/PF-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -437,7 +438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PF/PF-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

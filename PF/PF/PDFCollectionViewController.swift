@@ -20,21 +20,21 @@ class PDFCollectionViewController: BaseCollectionViewController {
         reuseIdentifier = "PDFCOLLECTION"
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let smallPDFDocumentName = items[indexPath.row]
         showDocument(document(smallPDFDocumentName))
     }
     
     //MARK: - PDF Operation
-    private func document(name: String) -> PDFDocument {
-        guard let documentURL = NSBundle.mainBundle().URLForResource(name, withExtension: "pdf") else {
+    fileprivate func document(_ name: String) -> PDFDocument {
+        guard let documentURL = Bundle.main.url(forResource: name, withExtension: "pdf") else {
             fatalError("File could not be found")
         }
         return PDFDocument(fileURL: documentURL)
     }
     
-    private func showDocument(document: PDFDocument) {
-        let storyboard = UIStoryboard(name: "PDFReader", bundle: NSBundle(forClass: PDFViewController.self))
+    fileprivate func showDocument(_ document: PDFDocument) {
+        let storyboard = UIStoryboard(name: "PDFReader", bundle: Bundle(for: PDFViewController.self))
         let controller = storyboard.instantiateInitialViewController() as! PDFViewController
         controller.document = document
         controller.title = document.fileName
